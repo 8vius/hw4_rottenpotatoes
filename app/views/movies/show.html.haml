@@ -3,6 +3,10 @@
 %h2 Details about #{@movie.title}
 
 %ul#details
+  %li 
+    Director:
+    = @movie.director 
+    = link_to 'Find Movies With The Same Director', similar_path(@movie.id) 
   %li
     Rating:
     = @movie.rating
